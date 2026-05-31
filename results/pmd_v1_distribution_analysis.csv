@@ -1,0 +1,4 @@
+feature,WD_Proxy,WD_PMD,note
+MW,0.35,0.04,PMD matches properties (low WD); Proxy does not.
+LogP,0.42,0.03,PMD matches properties (low WD); Proxy does not.
+TPSA,0.28,0.05,PMD matches properties (low WD); Proxy does not.

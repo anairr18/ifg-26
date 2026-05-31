@@ -1,0 +1,5 @@
+model,split,recall@5%_mean,recall@5%_lo,recall@5%_hi,lift_pi@5%_mean
+geom_EGNN_v1,scaffold,1.0,1.0,1.0,3216.23
+geom_EGNN_v1,e3_holdout,1.0,1.0,1.0,3025.0756886824906
+geom_EGNN_v1,target_holdout,1.0,1.0,1.0,4019.785
+geom_EGNN_v1,pair_holdout,1.0,1.0,1.0,3446.3740954625437

@@ -1,0 +1,4 @@
+Strategy,EF@1%,Precision@1%
+Stage 1 Only,2.0,1.0
+Stage 1 + Discriminator,2.0,1.0
+Stage 1+Discrim+MO,2.1,1.0

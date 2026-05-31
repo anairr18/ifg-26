@@ -1,0 +1,22 @@
+{
+  "run_timestamp": "2026-02-22T08:23:28.750330+00:00",
+  "n_P": 8621,
+  "n_U": 48251,
+  "u_to_p_ratio": 5.6,
+  "P_intersect_U": 0,
+  "swap_type_counts": {
+    "target_swap": 36972,
+    "e3_swap": 11279
+  },
+  "U_by_source_split": {
+    "train": 38310,
+    "test": 5031,
+    "val": 4910
+  },
+  "distribution_drift": {
+    "e3_uniprot_id": 0.0681,
+    "target_uniprot_id": 0.1078,
+    "ligand_inchikey": 0.0013
+  },
+  "max_drift_exceeded": true
+}

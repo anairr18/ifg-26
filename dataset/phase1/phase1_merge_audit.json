@@ -1,0 +1,103 @@
+{
+  "run_timestamp": "2026-02-22T05:44:29.339666+00:00",
+  "sha_checks": {
+    "data/curated/protein_mapping_manual_review.csv": "PASS",
+    "docs/task_definition.md": "PASS"
+  },
+  "exclusions": {
+    "mgdb_chem_fail_excluded": 228,
+    "mgtbind_chem_fail_excluded": 1,
+    "mgtbind_no_canonical_smiles": 1,
+    "mgdb_bio_no_canonical_smiles": 270,
+    "excluded_non_human_target": 2,
+    "excluded_other_endpoint": 1941,
+    "mgdb_protein_unmapped": 3245,
+    "exact_duplicates_removed": 5791,
+    "family_level_in_training": 1
+  },
+  "distributions": {},
+  "totals": {
+    "pre_dedup_pairs": 15134,
+    "post_dedup_pairs": 9343,
+    "training_pairs": 8621,
+    "diagnostic_pairs": 722,
+    "unique_compounds": 6317,
+    "unique_e3s": 96,
+    "unique_targets": 147,
+    "mutation_tracked_rows": 164,
+    "family_level_rows": 1,
+    "cross_dataset_overlap": 456
+  },
+  "tier_distribution": {
+    "2": 4912,
+    "1": 3709
+  },
+  "category_distribution": {
+    "binding_evidence": 4912,
+    "degradation_evidence": 3706,
+    "cooperativity_evidence": 3
+  },
+  "source_distribution": {
+    "mgdb": 4965,
+    "mgtbind": 3656
+  },
+  "mutation_details": {
+    "G12D": 129,
+    "C38N_N42C": 8,
+    "C38N": 8,
+    "G12C": 7,
+    "S37A": 4,
+    "R361H": 2,
+    "E156K_F190Y_A191S_S198D_P208M": 1,
+    "H60P": 1,
+    "T703D_V704I": 1,
+    "G12V": 1,
+    "S265L_I267V": 1,
+    "T2098L": 1
+  },
+  "pct_rows_lost_no_smiles": 1.56,
+  "e3_compound_counts": {
+    "Q96SW2": 1992,
+    "Q16531": 205,
+    "P01116_P15056": 157,
+    "P31947": 143,
+    "P01116": 123,
+    "P49427": 58,
+    "Q66K64": 48,
+    "Q14432": 43,
+    "P31946": 33,
+    "Q9BV68": 32,
+    "P62942": 23,
+    "Q15370_Q15369_P40337": 23,
+    "Q16531_Q96SW2": 23,
+    "Q9NZQ7": 20,
+    "P19474": 16,
+    "P40337_Q15370_Q15369": 11,
+    "O60260": 11,
+    "nan": 11,
+    "Q66K64_Q16531_Q9BW61": 8,
+    "Q9Y297_P63208": 8
+  },
+  "targets_per_e3": {
+    "Q96SW2": 29,
+    "P31947": 14,
+    "Q9BV68": 10,
+    "Q9NXF7": 8,
+    "Q16531_Q96SW2": 7,
+    "P63104": 4,
+    "Q15370_Q15369_P40337": 3,
+    "P40337_Q15370_Q15369": 3,
+    "P62942": 3,
+    "P93343": 3,
+    "Q16531": 3,
+    "Q96SW2_Q16531": 3,
+    "Q66K64": 2,
+    "Q9NZQ7": 2,
+    "O22476": 2,
+    "O80992": 2,
+    "P49427": 2,
+    "Q02750": 2,
+    "nan": 2,
+    "Q13451": 2
+  }
+}

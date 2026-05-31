@@ -1,0 +1,8 @@
+file,dataset,n_rows,n_cols,max_missing_col,max_missing_pct,smiles_col_found,protein_col_found,reference_col_found,endpoint_col_found,n_unique_proteins,n_unique_assays
+mgdb_bioactivity.csv,mgdb,9764,17,DOI,82.91,False,True,True,False,204,498
+mgdb_compounds.csv,mgdb,10264,1,1,98.52,False,False,False,False,0,0
+mgdb_patents.csv,mgdb,156,7,I P C,1.28,False,False,False,False,0,0
+mgdb_references.csv,mgdb,162,12,PMCID,40.12,False,False,True,False,0,0
+mgtbind_citations.csv,mgtbind,227,15,patent_link,93.83,False,False,True,False,0,0
+mgtbind_complexes.csv,mgtbind,3924,61,protein_a_phosphosite,100.0,False,False,False,False,0,0
+mgtbind_compounds.csv,mgtbind,3093,29,chembl_id,89.46,True,False,False,False,0,0

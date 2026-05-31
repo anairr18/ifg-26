@@ -1,0 +1,116 @@
+{
+  "run_timestamp": "2026-02-22T05:29:51.556159+00:00",
+  "config_path": "C:\\Users\\Aadi Nair\\.gemini\\antigravity\\scratch\\ifg26\\configs\\experiment\\phase1_default.yaml",
+  "tautomer_mode": false,
+  "assumptions": [
+    "tautomer_mode=off: InChIKey via standardized InChI handles tautomer-invariant dedup",
+    "MGDB skiprows=1 to skip BOM + literal row-0 artefact",
+    "Protein sequences in SMILES column classified as protein_sequence_contamination",
+    "Markush / wildcard SMILES (*) classified as markush_star and skipped",
+    "stereo_status uses FindPotentialStereo; no stereo imputation performed"
+  ],
+  "datasets": {
+    "mgdb_compounds": {
+      "total_rows": 10263,
+      "canonicalized_ok": 10035,
+      "failed": 228,
+      "ok_rate_pct": 97.78,
+      "elapsed_s": 47.56,
+      "mol_per_sec": 215.8,
+      "failures_by_reason": {
+        "empty_smiles": 138,
+        "parse_fail": 75,
+        "markush_star": 9,
+        "protein_sequence_contamination": 6
+      }
+    },
+    "mgtbind_compounds": {
+      "total_rows": 3093,
+      "canonicalized_ok": 3092,
+      "failed": 1,
+      "ok_rate_pct": 99.97,
+      "elapsed_s": 12.13,
+      "mol_per_sec": 254.9,
+      "failures_by_reason": {
+        "parse_fail": 1
+      }
+    }
+  },
+  "totals": {
+    "total_rows": 13356,
+    "canonicalized_ok": 13127,
+    "failed": 229,
+    "ok_rate_pct": 98.29,
+    "total_failures_rows": 229
+  },
+  "top_failure_examples": {
+    "empty_smiles": [
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-48",
+        "smiles_preview": "nan"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-263",
+        "smiles_preview": "nan"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-263",
+        "smiles_preview": "nan"
+      }
+    ],
+    "parse_fail": [
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-140",
+        "smiles_preview": "Zn"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-650",
+        "smiles_preview": "CC[C@@]1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(CN6CCN(CC6)S(=O)(=O)C7"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-676",
+        "smiles_preview": "CC[C@@]1(C2=C(COC1=O)C(=O)N3CC4=CC5=C(CN6CCN(CC6)C7=CC(=C(C="
+      }
+    ],
+    "markush_star": [
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-224",
+        "smiles_preview": "O=C1*C(=O)C(N2N=NC3=CC=C(CNC(=O)NC4=CC=C(Cl)C=C4)C=C3C2=O)CC"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-6979",
+        "smiles_preview": "CC1=C(C(=O)C)C(=O)N(C2CCCC2)C3=C1C=NC(=N3)NC4=CC=C(C=N4)N5CC"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-6979",
+        "smiles_preview": "CC1=C(C(=O)C)C(=O)N(C2CCCC2)C3=C1C=NC(=N3)NC4=CC=C(C=N4)N5CC"
+      }
+    ],
+    "protein_sequence_contamination": [
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-774",
+        "smiles_preview": "MSEKKQPVDLGLLEEDDEFEEFPAEDWAGLDEDEDAHVWEDNWDDDNVEDDFSNQLRAEL"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-786",
+        "smiles_preview": "MSRRSQRLTRYSQGDDDGSSSSGGSSVAGSQSTLFKDSPLRTLKRKSSNMKRLSPAPQLG"
+      },
+      {
+        "source": "mgdb_compounds",
+        "id": "MG-796",
+        "smiles_preview": "MSDQEAKPSTEDLGDKKEGEYIKLKVIGQDSSEIHFKVKMTTHLKKLKESYCQRQGVPMN"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+# IFG-26 — Default Phase 0 Experiment Config
+# Hydra config file: configs/experiment/phase0_default.yaml
+
+# ===========================================================================
+# Experiment identity
+# ===========================================================================
+experiment:
+  name: "ifg26_phase0_default"
+  phase: 0
+  description: "Data acquisition and curation baseline run"
+  seed: 42
+  run_date: "2026-02-21"
+  tags:
+    - "phase0"
+    - "mgdb"
+    - "mgtbind"
+
+# ===========================================================================
+# Data sources
+# ===========================================================================
+data:
+  mgdb:
+    raw_dir: "data/raw/mgdb"
+    portal_url: "http://mgdb.idruglab.cn"
+    version: "1.0"
+    files:
+      - "mgdb_compounds.csv"
+      - "mgdb_bioactivity.csv"
+      - "mgdb_references.csv"
+      - "mgdb_patents.csv"
+
+  mgtbind:
+    raw_dir: "data/raw/mgtbind"
+    portal_url: "https://mgtbind.pkumdl.cn"
+    version: "2026-NAR"
+    files:
+      - "mgtbind_compounds.csv"
+      - "mgtbind_interactions.csv"
+      - "mgtbind_structures.csv"
+
+  curated_dir: "dataset"
+  snapshot_dir: "data/frozen_snapshot_20260221"
+
+# ===========================================================================
+# SMILES audit thresholds
+# ===========================================================================
+smiles_audit:
+  invalid_threshold: 0.10       # >10% → MAJOR flag
+  stereo_threshold: 0.30        # >30% → LIMITATION flag
+  multifrag_threshold: 0.20     # informational
+
+# ===========================================================================
+# Protein mapping
+# ===========================================================================
+protein_mapping:
+  max_candidates: 3
+  ambiguity_min_score: 60       # minimum fuzzy score to accept match
+  ambiguity_score_diff: 10      # score gap threshold for ambiguity call
+  uniprot_rate_limit_delay: 0.5 # seconds between API calls
+  request_timeout: 30
+
+# ===========================================================================
+# Download
+# ===========================================================================
+download:
+  max_retries: 3
+  retry_delay_sec: 5
+  timeout_sec: 120
+  chunk_size: 8192
+
+# ===========================================================================
+# Logging
+# ===========================================================================
+logging:
+  acquisition_log: "logs/acquisition_log.txt"
+  mapping_log: "logs/mapping_log.txt"
+  level: "INFO"
+
+# ===========================================================================
+# Hydra runtime
+# ===========================================================================
+hydra:
+  run:
+    dir: "experiments/${experiment.name}/${now:%Y-%m-%d_%H-%M-%S}"
+  sweep:
+    dir: "experiments/${experiment.name}/multirun"
+    subdir: "${hydra.job.num}"
+  job:
+    chdir: true

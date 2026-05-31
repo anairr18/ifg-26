@@ -1,0 +1,7 @@
+path,category,status_keep_review_delete,reason,imported_called,produces_artifact,duplicate_of,placeholder_risk,publication_role
+scripts/run_ifg26_benchmark.py,Pipeline,Keep,Primary entrypoint.,Called by run_all_phases.sh,results/metrics.json,N/A,Low (prior estimation),Benchmark Baseline
+scripts/phase4_train_nnpu.py,Model,Keep,Primary training script.,Called by run_all_phases.sh,results/models/*.pt,N/A,Low,Main Table Producer
+data/curated/phase2,Data,Keep,Essential training data.,Called by many,N/A,N/A,None,Training Set
+archive/,Junk,Delete,Historical zips.,None,None,N/A,None,None
+docs/*.md,Junk,Delete,Abandoned reports.,None,None,N/A,None,None
+src/ifg26/evaluation,Module,Keep,Canonical metrics.,Imported by scripts,N/A,N/A,None,Core Logic

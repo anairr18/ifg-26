@@ -1,0 +1,5 @@
+Dataset,scaffold_count,scaffold_entropy
+Positives,704,4.5
+PMD-v1,321,3.2
+PU,500,4.0
+ChEMBL,10000,8.5

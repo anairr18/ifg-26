@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-10T03:55:38.899240+00:00",
+  "total_molecules": 2530,
+  "unique_inchikeys": 2530,
+  "parsed_ok": 4331,
+  "total_failures": 229,
+  "positive_iks_excluded": 8564,
+  "positive_smiles_excluded": 8575,
+  "source_breakdown": {
+    "MGDB": 2530
+  },
+  "stage_rejection_counts": {
+    "MGDB": {
+      "empty_smiles": 228
+    },
+    "MGTbind": {
+      "empty_smiles": 1
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Iteration,Model,Mean_Score,Novelty_Tc,Diversity
+1,IFG Interaction,0.35,0.22,0.92
+2,IFG Interaction,0.65,0.31,0.78
+3,IFG Interaction,0.88,0.36,0.65

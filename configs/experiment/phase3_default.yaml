@@ -1,0 +1,71 @@
+# IFG-26 Phase 3 — Featurization + Shortcut Audit Configuration
+
+preflight:
+  frozen_shas:
+    dataset/protein_mapping_manual_review.csv: "010e7c3c4248349e0727bccfb3d9605830b6af77eba0ce1ebfc7c9df3876ad65"
+    docs/task_definition.md: "faf8af36e6a8ca6fd910614bd6b53e9bc321fbce042af9c2cfaa5f5327fd4d14"
+
+inputs:
+  train_scaffold: dataset/phase2/train_scaffold.csv
+  val_scaffold:   dataset/phase2/val_scaffold.csv
+  test_scaffold:  dataset/phase2/test_scaffold.csv
+  mgdb_canon:     dataset/phase1/mgdb_compounds_canonicalized.csv
+  mgtbind_canon:  dataset/phase1/mgtbind_compounds_canonicalized.csv
+
+outputs:
+  features_dir: data/features
+  figures_dir:  results/figures/phase3
+
+ligand_features:
+  ecfp4:
+    radius: 2
+    nbits: 2048
+    use_features: false       # ECFP not FCFP
+  physchem:
+    descriptors:              # fixed documented list (never changes without version bump)
+      - MolWt
+      - MolLogP
+      - NumHDonors
+      - NumHAcceptors
+      - TPSA
+      - NumRotatableBonds
+      - RingCount
+      - FormalCharge
+      - FractionCSP3
+      - NumAromaticRings
+      - NumAliphaticRings
+      - NumHeteroatoms
+      - NumValenceElectrons
+
+protein_features:
+  tier_p1:
+    method: label_encoding     # integer index per UniProt ID
+    enabled: true
+  tier_p2:
+    method: stub               # ESM2/ProtT5 not available in current environment
+    enabled: false             # Set true in Phase 4 when embeddings cached
+    note: "ESM2 or ProtT5 embeddings deferred to Phase 4. Requires transformers+esm."
+
+similarity_bins:
+  thresholds: [0.60, 0.80, 0.85, 0.95]  # bin edges: A<0.60, B<0.80, C<0.85, D<0.95, E>=0.95
+  ecfp4_radius: 2
+  ecfp4_nbits: 2048
+  hist_bins: 50
+
+probes:
+  seed: 42
+  proxy_negative_strategy: mgdb_unmapped  # MGDB canonicalized compounds not in training pairs
+  max_proxy_negatives: 5000               # cap to balance classes
+  logistic:
+    C: 1.0
+    max_iter: 1000
+    solver: lbfgs
+    multi_class: auto
+  svc_protein:
+    C: 1.0
+    max_iter: 2000
+
+# Paper-level editorial policies (immutable after Phase 3 start)
+editorial_policies:
+  policy_1: "Exact overlap is prohibited; near-neighbor similarity is measured and reported, not hidden."
+  policy_2: "All headline results must be reported both (i) overall and (ii) excluding Bin E (NN>0.95) as a sensitivity analysis."

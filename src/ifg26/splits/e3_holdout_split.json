@@ -1,0 +1,13 @@
+{
+  "split_type": "E3-holdout split",
+  "key_col": "e3_uniprot",
+  "seed": 42,
+  "n_unique_vals": 95,
+  "train_vals": 76,
+  "val_vals": 9,
+  "test_vals": 10,
+  "train_rows": 8265,
+  "val_rows": 47,
+  "test_rows": 309,
+  "overlap": 0
+}

@@ -1,0 +1,5 @@
+artifact_or_metric,value_if_found,model,evaluation_tier,source_path,computed_or_hardcoded,reproducible,trust_level
+Recall@5% (LP0),0.0713,nnPU (LP0),Scaffold Holdout,results/tables/phase4B_nnpu_metrics.csv,Computed,Yes,High
+AUROC (PMD-v1),0.7981,LR + RF,Property-Matched Decoys,data/phase5_negative_ladder_core.csv,Computed,Yes,High
+AUROC (Proxy),0.9940,LR + RF,Random Decoys (Base),data/phase5_negative_ladder_core.csv,Computed,Yes,High
+AUROC (External PMD v2),0.9740,LR + RF,External Universe (Failure Case),docs/phase5_external_pmd_failure_report.md,Computed,Deferred,Low (Artifactual)

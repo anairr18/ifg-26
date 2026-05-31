@@ -1,0 +1,58 @@
+raw_protein_string,normalized_name,final_uniprot_id,gene_symbol,species,is_family_level,complex_component_flag,mutation,wildtype_uniprot,mapping_assumption_flag,exclusion_reason,reviewer_decision,reviewer_name,review_date
+GSPT1,Eukaryotic peptide chain release factor GTP-binding subunit ERF3A,P15170,GSPT1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IKZF1,DNA-binding protein Ikaros,Q13422,IKZF1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+CRBN,Protein cereblon,Q96SW2,CRBN,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+BRD4,Bromodomain-containing protein 4,O60885,BRD4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IKZF3,Zinc finger protein Aiolos,Q9UKT9,IKZF3,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+CDK12,Cyclin-dependent kinase 12,Q9NYV4,CDK12,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+cyclin K,Cyclin-K,O75909,CCNK,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+DCAF15,DDB1- and CUL4-associated factor 15,Q66K64,DCAF15,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+RBM39,RNA-binding protein 39,Q14498,RBM39,Human,FALSE,FALSE,,,,,Confirmed. Human canonical RBM39.,Biologist Reviewer,2026-02-21
+MDM2,E3 ubiquitin-protein ligase Mdm2,Q00987,MDM2,Human,FALSE,FALSE,,,,,Confirmed. Row 47 (long-form alias) merged here.,Biologist Reviewer,2026-02-21
+p53,Cellular tumor antigen p53,P04637,TP53,Human,FALSE,FALSE,,,,,Confirmed. Alias resolved to TP53/P04637.,Biologist Reviewer,2026-02-21
+CK1alpha,Casein kinase I isoform alpha,P48729,CSNK1A1,Human,FALSE,FALSE,,,raw_string_had_unicode_alpha,,Corrected. Unicode alpha normalized; symbol is CSNK1A1.,Biologist Reviewer,2026-02-21
+BRD2,Bromodomain-containing protein 2,P25440,BRD2,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IKZF2,Zinc finger protein Helios,Q9UKS7,IKZF2,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+14-3-3 protein,14-3-3 protein family (generic reference),P63104,YWHAZ,Human,TRUE,FALSE,,,family_level_mapping_YWHAZ_as_representative,,Map to YWHAZ (P63104) as standard representative. Exclude from specific benchmark split unless isoform confirmed in source paper.,Biologist Reviewer,2026-02-21
+WIZ,Zinc finger protein WIZ,O95785,WIZ,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+ZBTB11,Zinc finger and BTB domain-containing protein 11,O95625,ZBTB11,Human,FALSE,FALSE,,,,,Confirmed. Human canonical O95625.,Biologist Reviewer,2026-02-21
+SALL4,Sal-like protein 4,Q9UJQ4,SALL4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+CDK12-cyclin K [SPLIT 1/2],Cyclin-dependent kinase 12 (split from CDK12-cyclin K complex label),Q9NYV4,CDK12,Human,FALSE,TRUE,,,,,"Split from CDK12-cyclin K. Complex glues (e.g., CR8) recruit CDK12 to CCNK via shared interface.",Biologist Reviewer,2026-02-21
+CDK12-cyclin K [SPLIT 2/2],Cyclin-K (split from CDK12-cyclin K complex label),O75909,CCNK,Human,FALSE,TRUE,,,,,Split from CDK12-cyclin K. Cyclin K is CCNK/O75909.,Biologist Reviewer,2026-02-21
+CDK9,Cyclin-dependent kinase 9,P50750,CDK9,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+AR,Androgen receptor,P10275,AR,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+BRD9,Bromodomain-containing protein 9,Q9H8M2,BRD9,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+KRAS,GTPase KRas,P01116,KRAS,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+BCL6,B-cell lymphoma 6 protein,P41182,BCL6,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+SMARCA2,SWI/SNF-related regulator SMARCA2,P51531,SMARCA2,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+SMARCA4,SWI/SNF-related regulator SMARCA4,P51532,SMARCA4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+14-3-3sigma,14-3-3 protein sigma (Stratifin),P31947,SFN,Human,FALSE,FALSE,,,raw_string_had_unicode_sigma,,Corrected. Unicode sigma normalized; symbol is SFN.,Biologist Reviewer,2026-02-21
+HDAC1,Histone deacetylase 1,Q13547,HDAC1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IRAK4,Interleukin-1 receptor-associated kinase 4,Q9NWZ3,IRAK4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IDO1,"Indoleamine 2,3-dioxygenase 1",P14902,IDO1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+E2F2,Transcription factor E2F2,Q14209,E2F2,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+Lin28,Lin-28 homolog A,Q9H9Z2,LIN28A,Human,FALSE,FALSE,,,inferred_from_TPD_literature,,Map to LIN28A. Most degradation-literature references to Lin28 target LIN28A specifically.,Biologist Reviewer,2026-02-21
+PHGDH,D-3-phosphoglycerate dehydrogenase,O43175,PHGDH,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+TAZ,Transcriptional coactivator with PDZ-binding motif (WWTR1),Q9GZV5,WWTR1,Human,FALSE,FALSE,,,critical_alias_disambiguation,,"Confirmed: WWTR1 (Hippo pathway co-activator), NOT tafazzin/TAZ (mitochondrial). These are unrelated proteins.",Biologist Reviewer,2026-02-21
+YAP1,Transcriptional coactivator YAP1,P46938,YAP1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+WEE1,Wee1-like protein kinase,P30291,WEE1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+ZBTB16,Zinc finger and BTB domain-containing protein 16 (PLZF),Q05516,ZBTB16,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+ZEB1,Zinc finger E-box-binding homeobox 1,P37275,ZEB1,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+SHP2,Tyrosine-protein phosphatase non-receptor type 11,Q06124,PTPN11,Human,FALSE,FALSE,,,,,Confirmed. SHP2 alias resolved to PTPN11/Q06124.,Biologist Reviewer,2026-02-21
+SLFN12,Schlafen family member 12,Q8IYM2,SLFN12,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+GSPT2,Eukaryotic peptide chain release factor GTP-binding subunit ERF3B,Q8IYD1,GSPT2,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+UBR7,E3 ubiquitin-protein ligase UBR7,Q8N806,UBR7,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+IKZF4,Zinc finger protein Eos,Q9H2S9,IKZF4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+PRDX4,Peroxiredoxin-4,Q13162,PRDX4,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+USP28,Ubiquitin carboxyl-terminal hydrolase 28,Q96RU2,USP28,Human,FALSE,FALSE,,,,,Confirmed,Biologist Reviewer,2026-02-21
+VDR,Vitamin D3 receptor,P11473,VDR,Human,FALSE,FALSE,,,raw_string_cleaned_from_long_alias,,Confirmed. String cleaned from 'VDR — vitamin D receptor (human)' to 'VDR'.,Biologist Reviewer,2026-02-21
+EGFR L858R,Epidermal growth factor receptor (L858R mutant),P00533,EGFR,Human,FALSE,FALSE,L858R,P00533,mutation_tracked,,Confirmed. Map to P00533 with mutation metadata L858R. Do NOT collapse into wild-type.,Biologist Reviewer,2026-02-21
+14-3-3gamma,14-3-3 protein gamma,P61981,YWHAG,Human,FALSE,FALSE,,,raw_string_had_unicode_gamma,,Corrected. Unicode gamma normalized; symbol is YWHAG.,Biologist Reviewer,2026-02-21
+IKZF1/2/3 [SPLIT 1/3],DNA-binding protein Ikaros (split from IKZF1/2/3),Q13422,IKZF1,Human,FALSE,FALSE,,,split_from_multi_target_string,,Split from IKZF1/2/3. Each isoform recorded separately.,Biologist Reviewer,2026-02-21
+IKZF1/2/3 [SPLIT 2/3],Zinc finger protein Helios (split from IKZF1/2/3),Q9UKS7,IKZF2,Human,FALSE,FALSE,,,split_from_multi_target_string,,Split from IKZF1/2/3.,Biologist Reviewer,2026-02-21
+IKZF1/2/3 [SPLIT 3/3],Zinc finger protein Aiolos (split from IKZF1/2/3),Q9UKT9,IKZF3,Human,FALSE,FALSE,,,split_from_multi_target_string,,Split from IKZF1/2/3.,Biologist Reviewer,2026-02-21
+"CDK4,CDK6,IKZF2 [SPLIT 1/2]",Cyclin-dependent kinase 4 (split from multi-target string),P11802,CDK4,Human,FALSE,FALSE,,,split_from_multi_target_string,,Split. CDK4 included. IKZF2 NOT included — not confirmed in source context.,Biologist Reviewer,2026-02-21
+"CDK4,CDK6,IKZF2 [SPLIT 2/2]",Cyclin-dependent kinase 6 (split from multi-target string),Q00534,CDK6,Human,FALSE,FALSE,,,split_from_multi_target_string,,Split. CDK6 included.,Biologist Reviewer,2026-02-21
+植物蛋白,Plant protein (generic),,,Non-human (plant),FALSE,FALSE,,,,non-human species,Excluded. Non-human generic plant protein label.,Biologist Reviewer,2026-02-21
+High affinity nerve growth factor receptor,High affinity nerve growth factor receptor (TrkA),P04629,NTRK1,Human,FALSE,FALSE,,,,,"Confirmed. 'High affinity' qualifier confirms NTRK1 (TrkA), not p75/NGFR (TNFRSF16).",Biologist Reviewer,2026-02-21
+Ricin,Ricin (plant toxin),,,Non-human (plant toxin),FALSE,FALSE,,,,non-human toxin,Excluded. Non-human plant toxin; unsuitable for human TPD benchmark.,Biologist Reviewer,2026-02-21

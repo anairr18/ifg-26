@@ -1,0 +1,81 @@
+# IFG-26 Phase 4 — PU Learning Configuration
+
+preflight:
+  frozen_shas:
+    dataset/protein_mapping_manual_review.csv: "010e7c3c4248349e0727bccfb3d9605830b6af77eba0ce1ebfc7c9df3876ad65"
+    docs/task_definition.md: "faf8af36e6a8ca6fd910614bd6b53e9bc321fbce042af9c2cfaa5f5327fd4d14"
+
+inputs:
+  pairs_index:    data/features/scaffold_pairs_index.parquet
+  ligand_index:   data/features/ligand_index.parquet
+  ecfp4:          data/features/ligands_ecfp4.npy
+  physchem:       data/features/ligands_physchem.parquet
+  protein_index:  data/features/protein_index.parquet
+  sim_bins:       data/features/test_similarity_bins.parquet
+  mgdb_canon:     dataset/phase1/mgdb_compounds_canonicalized.csv
+  train_scaffold: dataset/phase2/train_scaffold.csv
+  val_scaffold:   dataset/phase2/val_scaffold.csv
+  test_scaffold:  dataset/phase2/test_scaffold.csv
+
+outputs:
+  pu_dir:      data/pu
+  neg_dir:     data/negatives
+  models_dir:  results/models
+  tables_dir:  results/tables
+  figures_dir: results/figures/phase4
+  features_dir: data/features
+
+# ── Phase 4A: PU pool construction ───────────────────────────────────
+pu_pool:
+  u_multiplier: 10          # target |U| ≈ 10 × |P|
+  k_tgt_swap: 5             # max swaps per positive (target-swap)
+  k_e3_swap:  5             # max swaps per positive (E3-swap)
+  allow_distribution_drift: true    # 10.8% target drift is dataset-driven (mean 2.1 tgts/E3)
+  drift_threshold: 0.10
+  seed: 42
+
+# ── Phase 4B: nnPU training ───────────────────────────────────────────
+nnpu:
+  pi_grid: [0.01, 0.02, 0.05, 0.10]   # P(Y=1) prior grid
+  models: [L0, LP0]
+  mlp:
+    hidden_dims: [512, 128]
+    dropout: 0.3
+    batch_norm: true
+  training:
+    lr: 0.001
+    weight_decay: 1.0e-4
+    epochs: 100
+    batch_size: 512
+    patience: 15              # early stopping patience
+    seed: 42
+  recall_k: [0.01, 0.05, 0.10]        # k for PU-Recall@k and Lift@k
+
+# ── Phase 4C: PMD negative generation ────────────────────────────────
+pmd:
+  mw_tol:    0.07       # ±7% (was 5%)
+  logp_tol:  0.7        # ±0.7 (was 0.5)
+  hbd_tol:   1
+  hba_tol:   1
+  tpsa_tol:  10.0
+  rotb_tol:  1
+  fraction_sp3_tol: 0.1 # New: strict sp3 matching
+  ring_count_tol: 1     # New: strict ring mapping
+  min_tanimoto_to_pos: 0.20   # NEW: similarity floor
+  max_tanimoto_to_pos: 0.70   # tighter similarity ceiling
+  scaffold_disjoint: true
+  n_negatives_per_pos: 3
+  target_pmd_negatives: 1500  # aim to generate max
+  min_pmd_negatives: 1000     # abort if <1000 produced
+  artifact_auroc_physchem_limit: 0.70
+  artifact_auroc_ecfp_limit:     0.85
+  seed: 42
+
+# ── Phase 4D: ESM2 protein embeddings ────────────────────────────────
+protein_embeddings:
+  model: esm2_t6_8M_UR50D    # 320-dim, 6 layers, fast on CPU
+  batch_size: 8
+  repr_layer: 6               # last layer
+  cache_path: data/features/protein_embeddings_esm2.parquet
+  uniprot_api: "https://rest.uniprot.org/uniprotkb/{id}.fasta"
+  timeout_per_seq: 10         # seconds per UniProt API call

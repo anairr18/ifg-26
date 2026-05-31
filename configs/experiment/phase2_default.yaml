@@ -1,0 +1,53 @@
+# IFG-26 Phase 2 — Leakage-Resistant Splitting Configuration
+# ------------------------------------------------------------
+
+preflight:
+  frozen_shas:
+    dataset/protein_mapping_manual_review.csv: "010e7c3c4248349e0727bccfb3d9605830b6af77eba0ce1ebfc7c9df3876ad65"
+    docs/task_definition.md: "faf8af36e6a8ca6fd910614bd6b53e9bc321fbce042af9c2cfaa5f5327fd4d14"
+  expected_training_rows: 8621     # after filtering to Tier 1+2 + diagnostic_only=False
+  abort_on_row_count_mismatch: true
+
+inputs:
+  training_pairs: dataset/phase1/ifg26_training_pairs.csv
+  mgdb_bioactivity: data/raw/mgdb/mgdb_bioactivity.csv
+  mgdb_bioactivity_encoding: utf-8-sig
+
+outputs:
+  phase2_dir: dataset/phase2
+  splits_dir: splits
+  figures_dir: results/figures/phase2
+  docs_dir: docs
+
+split:
+  seed: 42
+  train_frac: 0.80
+  val_frac:   0.10
+  test_frac:  0.10
+
+scaffold_split:
+  enabled: true
+  smiles_col: canonical_smiles   # non-isomeric for scaffold extraction
+  dedup_by_inchikey: true        # scaffold groups deduplicated by InChIKey
+
+source_split:
+  enabled: true
+  doi_col: DOI
+  patent_col: "Patent number"
+  fallback: source_id_hash       # if DOI+patent both missing
+
+ternary_splits:
+  e3_holdout:
+    enabled: true
+  target_holdout:
+    enabled: true
+  pair_holdout:
+    enabled: true
+
+leakage_audit:
+  ecfp4_radius: 2
+  ecfp4_nbits: 2048
+  nn_tanimoto_thresholds: [0.95, 0.85, 0.70]
+  abort_threshold_095: 0.02      # fraction of test > 0.95 that triggers abort
+  abort_threshold_085: 0.10      # warn but do not abort if > 0.10
+  hist_bins: 50

@@ -1,0 +1,9 @@
+{
+  "split_type": "pair_holdout",
+  "seed": 42,
+  "n_unique_pairs": 177,
+  "train_rows": 8515,
+  "val_rows": 68,
+  "test_rows": 38,
+  "overlap": 0
+}

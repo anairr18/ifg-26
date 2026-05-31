@@ -1,0 +1,35 @@
+{
+  "run_timestamp": "2026-02-22T07:54:14.382330+00:00",
+  "n_unique_ligands": 6317,
+  "ecfp4_shape": [
+    6317,
+    2048
+  ],
+  "physchem_cols": [
+    "MolWt",
+    "MolLogP",
+    "NumHDonors",
+    "NumHAcceptors",
+    "TPSA",
+    "NumRotatableBonds",
+    "RingCount",
+    "FormalCharge",
+    "FractionCSP3",
+    "NumAromaticRings",
+    "NumAliphaticRings",
+    "NumHeteroatoms",
+    "NumValenceElectrons"
+  ],
+  "n_unique_proteins": 213,
+  "n_train_rows": 6792,
+  "n_val_rows": 932,
+  "n_test_rows": 897,
+  "test_similarity_bins": {
+    "A": 56,
+    "B": 317,
+    "C": 99,
+    "D": 133,
+    "E": 27
+  },
+  "test_bin_e_pct": 4.27
+}

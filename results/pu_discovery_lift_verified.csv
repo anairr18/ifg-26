@@ -1,0 +1,3 @@
+model,Recall@5%,Discovery_Lift
+M1_Baseline,0.033,1.0
+M4_PUPrototype,0.071,2.15

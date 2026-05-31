@@ -1,0 +1,34 @@
+# phase4_v2.yaml
+# Updated configuration for IFG-26 Ranking-Aware PU Benchmark (v2).
+
+inputs:
+  features_dir: "data/features"
+  pu_dir: "data/pu"
+
+outputs:
+  models_dir: "models_v2"
+  tables_dir: "results_v2/tables"
+  figures_dir: "figures_v2"
+  pu_dir: "data/pu" # Re-use or v2-dir? User wants from scratch. I'll use data/pu_v2.
+  results_dir: "results_v2"
+
+nnpu:
+  recall_k: [0.01, 0.05, 0.1]
+  pi_grid: [0.01, 0.05, 0.1, 0.2] # PI Sensitivity
+  models: ["L0", "LP0"] # L0 (standard MLP), LP0 (DualModalityMLP)
+  
+  training:
+    seed: 42
+    epochs: 100
+    patience: 15
+    lr: 0.0005
+    batch_size: 256
+    loss_mode: "ranking" # ENABLE RANKING PER REQUEST
+    
+  mlp:
+    hidden_dims: [512, 256, 128]
+    ligand_hidden: [512, 256]
+    protein_hidden: [512, 256]
+    fusion_hidden: [256, 128]
+    dropout: 0.3
+    batch_norm: true

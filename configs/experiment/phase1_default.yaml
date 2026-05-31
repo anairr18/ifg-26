@@ -1,0 +1,50 @@
+# IFG-26 Phase 1 — Default Chemical Standardization Configuration
+# -------------------------------------------------------------------
+# tautomer_mode controls whether tautomer canonicalization is applied.
+#
+#   off  — (Phase 1 default) Salt strip + charge normalization only.
+#           Fast, deterministic, suitable for ~13k compound scale.
+#           InChIKey is still computed via standardized InChI, which
+#           handles tautomers internally for dedup purposes.
+#
+#   on   — (Phase 1b, future) Tautomer canonical form computed with
+#           RDKit TautomerEnumerator. Caps enforced via max_tautomers
+#           and max_transforms. Per-molecule timeout via signal/thread.
+#           Not default — too slow for large macrocyclic PROTACs in MGDB.
+
+canonicalization:
+  tautomer_mode: off           # "off" | "on"
+  largest_fragment: true       # keep largest fragment (salt strip)
+  uncharge: true               # normalize formal charges
+  write_audit: true            # write phase1_chem_audit.json
+  log_every_n_rows: 500        # print progress/ETA every N rows
+
+  # Phase 1b options (only active when tautomer_mode: on)
+  tautomer_caps:
+    max_tautomers: 50
+    max_transforms: 200
+    timeout_seconds: 5         # per-molecule timeout (Phase 1b only)
+
+inputs:
+  mgdb_compounds:
+    path: data/raw/mgdb/mgdb_compounds.csv
+    skiprows: 1                # skip BOM + literal "1" row 0
+    encoding: utf-8-sig
+    smiles_col: Smiles
+    id_col: ID
+    name_col: Name
+
+  mgtbind_compounds:
+    path: data/raw/mgtbind/mgtbind_compounds.csv
+    skiprows: 0
+    encoding: utf-8
+    smiles_col: canonical_smiles
+    id_col: id
+    name_col: name
+
+outputs:
+  base_dir: dataset/phase1
+  mgdb_out: mgdb_compounds_canonicalized.csv
+  mgtbind_out: mgtbind_compounds_canonicalized.csv
+  failures_out: chem_failures.csv
+  audit_out: phase1_chem_audit.json

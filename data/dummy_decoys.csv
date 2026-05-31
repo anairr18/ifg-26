@@ -1,0 +1,5 @@
+ligand_smiles,e3_protein,neosubstrate,label,source
+CCO,CRBN,IKZF1,0,ChEMBL
+CCC,CRBN,GSPT1,0,ChEMBL
+CCCC,VHL,IKZF1,0,ChEMBL
+CCCCC,VHL,GSPT1,0,ChEMBL

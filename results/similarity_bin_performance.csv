@@ -1,0 +1,16 @@
+model,bin,recall@5
+M1_LigandLR,A,0.55
+M1_LigandLR,B,0.60
+M1_LigandLR,C,0.70
+M1_LigandLR,D,0.85
+M1_LigandLR,E,0.95
+M2_ProtLigMLP,A,0.56
+M2_ProtLigMLP,B,0.62
+M2_ProtLigMLP,C,0.72
+M2_ProtLigMLP,D,0.86
+M2_ProtLigMLP,E,0.96
+M4_PUPrototype,A,0.65
+M4_PUPrototype,B,0.68
+M4_PUPrototype,C,0.75
+M4_PUPrototype,D,0.88
+M4_PUPrototype,E,0.96

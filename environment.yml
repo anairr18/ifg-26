@@ -1,0 +1,24 @@
+name: ifg26
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.13
+  - rdkit=2024.09.6
+  - pytorch>=2.3.0
+  - torchvision>=0.18.0
+  - pandas>=2.2.0
+  - numpy
+  - matplotlib>=3.9.0
+  - seaborn>=0.13.0
+  - scikit-learn>=1.5.0
+  - pip:
+    - datamol>=0.12.0
+    - selfies>=2.1.2
+    - rapidfuzz>=3.9.0
+    - plotly>=5.22.0
+    - ipykernel>=6.29.0
+    - jupyter>=1.0.0
+    - nbformat>=5.10.0
+    - hydra-core>=1.3.0
+    - pyyaml

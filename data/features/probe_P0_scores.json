@@ -1,0 +1,64 @@
+{
+  "probe_name": "P0",
+  "val_metrics": {
+    "label": "val",
+    "n_positives": 932,
+    "score_mean": 0.964,
+    "score_std": 0.122,
+    "score_median": 0.9971
+  },
+  "test_metrics": {
+    "label": "test",
+    "n_positives": 897,
+    "score_mean": 0.9817,
+    "score_std": 0.0846,
+    "score_median": 0.9971
+  },
+  "test_bin_stratified": {
+    "A": {
+      "n": 70,
+      "median": 0.9927,
+      "q25": 0.944,
+      "q75": 0.9978,
+      "mean": 0.9012
+    },
+    "B": {
+      "n": 476,
+      "median": 0.9969,
+      "q25": 0.9959,
+      "q75": 0.9979,
+      "mean": 0.984
+    },
+    "C": {
+      "n": 138,
+      "median": 0.9977,
+      "q25": 0.9971,
+      "q75": 0.9987,
+      "mean": 0.9976
+    },
+    "D": {
+      "n": 176,
+      "median": 0.9977,
+      "q25": 0.9964,
+      "q75": 0.9987,
+      "mean": 0.9925
+    },
+    "E": {
+      "n": 37,
+      "median": 0.9977,
+      "q25": 0.9964,
+      "q75": 0.9987,
+      "mean": 0.9936
+    }
+  },
+  "editorial_policy_2": "All headline results reported both overall and excluding Bin E (NN>0.95) as a sensitivity analysis per IFG-26 Phase 3 editorial policy.",
+  "test_exclude_binE": {
+    "n": 860,
+    "score_mean": 0.9812,
+    "score_median": 0.9971
+  },
+  "test_binE_only": {
+    "n": 37,
+    "score_mean": 0.9936
+  }
+}

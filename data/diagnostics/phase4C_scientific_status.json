@@ -1,0 +1,7 @@
+{
+  "physchem_pass": true,
+  "ecfp4_pass": false,
+  "count_pass": false,
+  "physchem_auroc": 0.6915612795040957,
+  "ecfp4_auroc": 0.9202342135252927
+}

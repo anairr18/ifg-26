@@ -1,0 +1,36 @@
+# Data exclusions
+data/raw/
+data/curated/
+data/preds/
+data/splits/
+results/figures/*.png
+results/tables/*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Benchmark Artifacts
+docs/figures/
+docs/provenance_audit.json
+
+# Exclude all markdown, documents, and reports
+*.md
+*.txt
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+*.log
+docs/
+reports/

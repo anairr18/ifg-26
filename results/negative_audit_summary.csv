@@ -1,0 +1,6 @@
+Feature_Subset,Model,AUROC,Threshold,Pass
+physchem,Logistic Regression,0.65,0.7,True
+physchem,Random Forest,0.68,0.7,True
+ecfp4,Logistic Regression,0.81,0.85,True
+ecfp4,Random Forest,0.84,0.85,True
+combined,Logistic Regression,0.85,0.9,True

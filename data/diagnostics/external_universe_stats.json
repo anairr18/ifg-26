@@ -1,0 +1,7 @@
+{
+  "total_raw": 796958,
+  "chembl_parse_fail": 5,
+  "positive_overlap": 223,
+  "not_drug_like": 296730,
+  "accepted": 500000
+}

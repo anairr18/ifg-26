@@ -1,0 +1,5 @@
+regime,AUROC,Recall@5%,AUROC_CI95
+Proxy,0.994,0.12,0.001
+PMD-v1,0.798,0.101,0.013
+Scaffold,0.64,0.084,0.025
+PU Ranking,0.849,0.061,0.012

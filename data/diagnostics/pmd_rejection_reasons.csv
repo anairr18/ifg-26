@@ -1,0 +1,12 @@
+Rejection Reason,Count
+MW,287957
+logP,35547
+TPSA,9420
+HBD/HBA,5672
+fraction_sp3,5592
+similarity_constraint,1814
+ring_count,680
+outside formal charge,6
+duplicate,0
+invalid_smiles,0
+scaffold_mismatch,0

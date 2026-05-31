@@ -1,0 +1,5 @@
+restricted_feature,AUROC_Delta,Recall_Delta
+Physchem,-0.34,-0.08
+ScaffoldID,-0.42,-0.1
+ProteinID,-0.38,-0.09
+ECFP4,-0.15,-0.04

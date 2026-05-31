@@ -1,0 +1,10 @@
+{
+    "positive_pairs": 8621,
+    "unique_ligands": 6317,
+    "unique_scaffolds": 704,
+    "unique_targets": 235,
+    "unique_E3s": 12,
+    "duplicate_rate": 0.0,
+    "scaffold_overlap_rate": 0.0,
+    "leakage_audit": "CLEAN"
+}

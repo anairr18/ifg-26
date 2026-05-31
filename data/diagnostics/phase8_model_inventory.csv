@@ -1,0 +1,7 @@
+model_id,model_name,source,task_type,input_features,reproduction_type,limitations
+M1,Ligand-MLP,Baseline,ligand_only,ECFP4,Exact,Cannot see protein context
+M2,ProtLig-MLP,Baseline,ligand_protein,ECFP4+ProtBert,Exact,May exploit protein identity shortcuts
+M3,XGBoost-Full,Baseline,ligand_only,ECFP4+Descriptors,Approximation,Non-spatial
+M4,NNPU-Glue,phase4_train_nnpu.py,ternary_pu,ECFP4+Embeddings,Exact,Dependent on PU prior
+M5,Similarity-MaxT,Baseline,structural_similarity,SMILES,Exact,Purely reactive (no learning)
+M6,Ternary-GNN,Approximation,interaction_aware,Graph+ProtBert,Approximation,Simplified interaction modeling

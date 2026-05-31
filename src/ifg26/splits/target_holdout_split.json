@@ -1,0 +1,13 @@
+{
+  "split_type": "Target-holdout split",
+  "key_col": "target_uniprot",
+  "seed": 42,
+  "n_unique_vals": 146,
+  "train_vals": 116,
+  "val_vals": 14,
+  "test_vals": 16,
+  "train_rows": 7466,
+  "val_rows": 167,
+  "test_rows": 988,
+  "overlap": 0
+}

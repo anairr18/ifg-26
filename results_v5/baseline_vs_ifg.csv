@@ -1,0 +1,4 @@
+Pipeline,Recall@5%,Novelty_Tc,Diversity,PAINS_Rate
+Random Selection,0.01,0.1,0.95,0.08
+nnPU-L0 (Ligand Only),0.05,0.68,0.15,0.07
+IFG Interaction (v5),0.16,0.36,0.65,0.01

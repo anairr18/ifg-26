@@ -1,0 +1,7 @@
+{
+  "pmd_count": 1190,
+  "rejections": {
+    "no_prop_match": 1457,
+    "no_sim_match": 3387
+  }
+}

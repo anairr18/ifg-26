@@ -1,0 +1,6 @@
+Feature_Set,AUROC
+Physchem only,0.65
+ECFP4 only,0.58
+Scaffold ID only,0.52
+Molecular weight only,0.51
+Full Model,0.85

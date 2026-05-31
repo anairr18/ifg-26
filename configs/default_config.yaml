@@ -1,0 +1,24 @@
+fingerprint_radius: 2
+fingerprint_bits: 2048
+
+# Model Hyperparameters
+random_forest:
+  n_estimators: 500
+  max_depth: null
+  random_state: 42
+
+logistic_regression:
+  max_iter: 1000
+  random_state: 42
+
+nearest_neighbor:
+  n_neighbors: 5
+  metric: 'jaccard'
+
+# Evaluation
+bootstrap_iterations: 1000
+recall_k_values: [1, 5, 10]
+lift_k_values: [1, 5, 10]
+
+# PU Learning
+baseline_prior: 0.02
